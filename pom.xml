@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+    </parent>
+
+    <groupId>org.example</groupId>
+    <artifactId>distributed-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>redis-remo</module>
+        <module>zookeeper-demo</module>
+        <module>zookeeper-register-center/product-center</module>
+        <module>zookeeper-register-center/user-center</module>
+        <module>mongodb-demo</module>
+        <module>shardingsphere-demo</module>
+        <module>es-demo</module>
+        <module>netty-demo</module>
+        <module>spring-cloud-alibaba/mall-gateway</module>
+        <module>spring-cloud-alibaba/mall-user</module>
+        <module>spring-cloud-alibaba/mall-order</module>
+        <module>spring-demo</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>2.9.0</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>3.6.5</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
