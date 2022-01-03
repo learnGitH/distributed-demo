@@ -1342,6 +1342,8 @@ https://mongodb.github.io/mongo-java-driver/4.1/driver/
 
 https://docs.spring.io/spring-data/mongodb/docs/3.1.2/reference/html/#preface
 
+https://github.com/spring-projects/spring-data-examples	#例子
+
 引入maven
 
 ```
