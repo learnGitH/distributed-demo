@@ -3,6 +3,16 @@
 #spring:
 #  profiles:
 #    active: dev
+spring:
+  mail:
+    username: hbshencon@163.com
+    password: BERSGORNDWSDJHQX  #163邮箱授权码
+    host: smtp.163.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
 
 person:
   lastName: hello

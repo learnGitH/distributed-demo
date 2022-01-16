@@ -608,5 +608,18 @@ java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --spring.config.location=G
 
 
 
+几个重要的事件回调机制
+
+配置在META-INF/spring.factories
+
+**ApplicationContextInitializer**
+
+**SpringApplicationRunListener**
 
 
+
+只需要放在ioc容器中
+
+**ApplicationRunner**
+
+**CommandLineRunner**
