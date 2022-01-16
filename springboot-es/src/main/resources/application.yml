@@ -1,0 +1,4 @@
+elasticsearch:
+ urls:
+  - host: 192.168.159.135
+    port: 9200

@@ -1,0 +1,18 @@
+#server:
+ # port: 8081
+#spring:
+#  profiles:
+#    active: dev
+
+person:
+  lastName: hello
+  age: 18
+  boss: false
+  birth: 2022/1/8
+  maps: {k1: v1,k2: v2}
+  lists:
+    - lisi
+    - zhaoliu
+  dog:
+    name: 小狗
+    age: 12

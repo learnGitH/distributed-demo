@@ -1,0 +1,1 @@
+INSERT INTO authors (id, first_name, last_name) VALUES (6, 'Leo', 'testFile');

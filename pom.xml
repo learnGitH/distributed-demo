@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
+        <version>2.3.4.RELEASE</version>
     </parent>
 
     <groupId>org.example</groupId>
@@ -27,6 +27,9 @@
         <module>spring-cloud-alibaba/mall-user</module>
         <module>spring-cloud-alibaba/mall-order</module>
         <module>spring-demo</module>
+        <module>flyway-demo</module>
+        <module>springboot-demo</module>
+        <module>springboot-es</module>
     </modules>
 
     <dependencyManagement>
