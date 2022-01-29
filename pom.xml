@@ -30,6 +30,7 @@
         <module>flyway-demo</module>
         <module>springboot-demo</module>
         <module>springboot-es</module>
+        <module>springsecurity-demo</module>
     </modules>
 
     <dependencyManagement>
