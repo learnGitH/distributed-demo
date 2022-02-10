@@ -10,10 +10,6 @@ import io.searchbox.cluster.NodesInfo;
 import io.searchbox.cluster.NodesStats;
 import io.searchbox.core.*;
 import io.searchbox.indices.*;
-import org.elasticsearch.index.query.QueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.search.builder.SearchSourceBuilder;
-import org.elasticsearch.search.suggest.Suggest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -234,7 +230,7 @@ public class JestApiTest {
      * 查询全部
      * @throws Exception
      */
-    @Test
+    /*@Test
     public void searchAll() throws IOException {
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
         searchSourceBuilder.query(QueryBuilders.matchAllQuery());
@@ -250,7 +246,7 @@ public class JestApiTest {
             System.out.println("来源："+source.getSource());
             System.out.println("作者："+source.getAuthor());
         }
-    }
+    }*/
 
     @Test
     public void bulkIndex() throws Exception {
