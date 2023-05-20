@@ -54,11 +54,13 @@ public class ActSpringbootApplicationTests {
     @Test
     public void test03(){
         repositoryService.createDeployment()
-                .addClasspathResource("processes/my-evection.bpmn")
-                .addClasspathResource("processes/my-evection.png")
+                .addClasspathResource("processes/evection.bpmn")
+                .addClasspathResource("processes/evection.png")
                 .name("出差申请单")
                 .deploy();
     }
+
+
 
     /**
      * 启动流程实例

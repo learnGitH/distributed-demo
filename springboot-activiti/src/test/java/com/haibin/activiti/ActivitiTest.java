@@ -1,5 +1,6 @@
 package com.haibin.activiti;
 
+import com.haibin.activiti.command.JumpTestCmd;
 import com.haibin.activiti.pojo.Evection;
 import org.activiti.engine.*;
 import org.activiti.engine.repository.Deployment;
@@ -43,6 +44,48 @@ public class ActivitiTest {
         System.out.println("流程部署的id:" + deploy.getId());
         System.out.println("流程部署的名称：" + deploy.getName());
     }
+
+    /**
+     * 启动一个流程实例
+     */
+    @Test
+    public void start(){
+        // 1.创建ProcessEngine对象
+        ProcessEngine engine = ProcessEngines.getDefaultProcessEngine();
+        // 2.获取RuntimeService对象
+        RuntimeService runtimeService = engine.getRuntimeService();
+        // 3.根据流程定义的id启动流程
+        String id= "evection";
+        ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(id);
+        // 4.输出相关的流程实例信息
+        System.out.println("流程定义的ID：" + processInstance.getProcessDefinitionId());
+        System.out.println("流程实例的ID：" + processInstance.getId());
+        System.out.println("当前活动的ID：" + processInstance.getActivityId());
+    }
+    /**
+     * 流程任务的处理
+     */
+    @Test
+    public void deal(){
+        ProcessEngine engine = ProcessEngines.getDefaultProcessEngine();
+        TaskService taskService = engine.getTaskService();
+        Task task = taskService.createTaskQuery()
+                .processDefinitionKey("evection")
+                .taskAssignee("wangwu")
+                .singleResult();
+        // 完成任务
+        taskService.complete(task.getId());
+    }
+
+    @Test
+    public void jumpWorkflow(){
+        ProcessEngine engine = ProcessEngines.getDefaultProcessEngine();
+        TaskService taskService = engine.getTaskService();
+        ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
+      //  Task task = taskService.createTaskQuery().taskId("1002").singleResult();
+        processEngine.getManagementService().executeCommand(new JumpTestCmd("2505","总经理审批","haibin"));
+    }
+
 
     @Test
     public void test03(){

@@ -54,6 +54,22 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- 注意是starter,自动配置 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <!-- 不是starter,手动配置 -->
+    <dependency>
+        <groupId>org.springframework.security.oauth</groupId>
+        <artifactId>spring-security-oauth2</artifactId>
+    </dependency>
+    <!-- 将token存储在redis中 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+
   </dependencies>
 
   <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->
